@@ -14,54 +14,134 @@
   <script src="https://signiflyproject-6577.restdb.io/assets/js/jquery.datetimepicker.full.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.5.1/lodash.min.js"></script>
 </head>
+
+<style>
+  .thank-you{
+    font-size: 16px;
+    padding: 20px;
+    z-index: +1;	
+    color: blueviolet;
+  }
+  #signiflyform-form{
+    padding: 10px;
+  }
+  #signiflyform-form input,  #signiflyform-form select{
+    width: 400px;
+  }
+  label{
+    display: block;
+  }
+  .form-control{
+    width: auto;
+  }
+  .help-block{
+    margin-left:10px;
+  }
+  .progress{
+    width: 300px;
+    height:10px;
+    border-radius:0px;
+    margin-top: 2px;
+  }
+  #btn-submit{
+      width: 100px; 
+  
+  }
+</style>
+
 <body>
-  <form role="form" id="signiflyform-form">
-<div class="form-group">
-  <label>Name: </label><input class="form-control" name="name" data-type="text" type="text" required>
-</div>
-<div class="form-group">
-  <label>Gamertag: </label><input class="form-control" name="gamertag" data-type="text" type="text">
-</div>
-<div class="form-group">
-  <label>Mail: </label><input class="form-control" name="mail" data-type="email" type="email" required>
-</div>
-<div class="form-group">
-  <label>Birthday: </label><input class="form-control"  name="birthday" data-type="date" type="date">
-</div>
-<div class="form-group">
-  <label>Computer: </label><input class="form-control" name="computer" data-type="bool" type="checkbox">
-</div>
-<div class="form-group">
-  <label>Playstation: </label><input class="form-control" name="playstation" data-type="bool" type="checkbox">
-</div>
-<div class="form-group">
-  <label>Xbox: </label><input class="form-control" name="xbox" data-type="bool" type="checkbox">
-</div>
-<div class="form-group">
-  <label>Other: </label><input class="form-control" name="other" data-type="bool" type="checkbox">
-</div>
-<div class="form-group">
-  <label>Fps: </label><input class="form-control" name="fps" data-type="bool" type="checkbox">
-</div>
-<div class="form-group">
-  <label>Simulation: </label><input class="form-control" name="simulation" data-type="bool" type="checkbox">
-</div>
-<div class="form-group">
-  <label>Sport: </label><input class="form-control" name="sport" data-type="bool" type="checkbox">
-</div>
-<div class="form-group">
-  <label>Survival: </label><input class="form-control" name="survival" data-type="bool" type="checkbox">
-</div>
-<div class="form-group">
-  <label>Strategy: </label><input class="form-control" name="strategy" data-type="bool" type="checkbox">
-</div>
-<div class="form-group">
-  <label>Rpg: </label><input class="form-control" name="rpg" data-type="bool" type="checkbox">
+ 
+  <div class="signup__container">
+  <div class="container__child signup__thumbnail">
+
+    <div class="thumbnail__content text-center">
+      <h1 class="heading--primary">Welcome to E-Zone.</h1>
+      <h2 class="heading--secondary">Are you ready to join the elite?</h2>
+    </div>
+    
+    <div class="signup__overlay"></div>
+  
+
+  <div class="thumbnail__links">
+    <ul class="list-inline m-b-0 text-center">
+      <li><a href="https://www.instagram.com/ezoneesports/" target="_blank"><i class="fa fa-globe"></i></a></li>
+      <li><a href="https://www.tiktok.com/@ezoneesports?lang=en" target="_blank"><fa class="fa fa-behance"></fa></a></li>
+      <li><a href="https://www.youtube.com/channel/UCCpcxW7AwgJoP_ZpXjAzb1Q" target="_blank"><i class="fa fa-github"></i></a></li>
+      <li><a href="https://twitter.com/EzoneEsports" target="_blank"><i class="fa fa-twitter"></i></a></li>
+    </ul>
+  </div>
 </div>
 
-  <div id="fg-errors" class="form-group">
+  <div class="container__child signup__form">
+    
+     
+        <form role="form" id="signiflyform-form">
+          <div class="form-group">
+            <label>Name: </label><input class="form-control" name="name" data-type="text" type="text" required>
+          </div>
+          <div class="form-group">
+            <label>Gamertag: </label><input class="form-control" name="gamertag" data-type="text" type="text">
+          </div>
+          <div class="form-group">
+            <label>Mail: </label><input class="form-control" name="mail" data-type="email" type="email" required>
+          </div>
+          <div class="form-group">
+            <label>Birthday: </label><input class="form-control"  name="birthday" data-type="date" type="date">
+          </div>
+          <br>
+          <h5>Platforms</h5>
+          <br>
+          <div class="form-group">
+            <label>Computer: </label><input class="form-control" name="computer" data-type="bool" type="checkbox">
+          </div>
+          <div class="form-group">
+            <label>Playstation: </label><input class="form-control" name="playstation" data-type="bool" type="checkbox">
+          </div>
+          <div class="form-group">
+            <label>Xbox: </label><input class="form-control" name="xbox" data-type="bool" type="checkbox">
+          </div>
+          <div class="form-group">
+            <label>Other: </label><input class="form-control" name="other" data-type="bool" type="checkbox">
+          </div>
+          <br>
+          <h5>Genre</h5>
+          <br>
+          <div class="form-group">
+            <label>Fps: </label><input class="form-control" name="fps" data-type="bool" type="checkbox">
+          </div>
+          <div class="form-group">
+            <label>Simulation: </label><input class="form-control" name="simulation" data-type="bool" type="checkbox">
+          </div>
+          <div class="form-group">
+            <label>Sport: </label><input class="form-control" name="sport" data-type="bool" type="checkbox">
+          </div>
+          <div class="form-group">
+            <label>Survival: </label><input class="form-control" name="survival" data-type="bool" type="checkbox">
+          </div>
+          <div class="form-group">
+            <label>Strategy: </label><input class="form-control" name="strategy" data-type="bool" type="checkbox">
+          </div>
+          <div class="form-group">
+            <label>Rpg: </label><input class="form-control" name="rpg" data-type="bool" type="checkbox">
+          </div>
+          
+
+          <div id="fg-errors" class="form-group"></div>
+          <button class="btn btn-primary btn-lg" id="btn-submit" type="submit" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Submitting...">Submit</button>
+        </form>
+          <div class="m-t-lg">
+        <ul class="list-inline">
+          
+        </ul>
+      </div>
+  
   </div>
-  <button class="btn btn-primary btn-lg" id="btn-submit" type="submit" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Submitting...">Submit</button></form>
+  </div>
+
+  
+
+
+  <script type="module" src="main.js"></script>
 
 </body>
 </html>
