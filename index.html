@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>restdb.io signiflyform</title>
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw==" crossorigin="anonymous">
+  <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw==" crossorigin="anonymous"> -->
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-hQpvDQiCJaD2H465dQfA717v7lu5qHWtDbWNPvaTJ0ID5xnPUlVXnKzq7b8YUkbN" crossorigin="anonymous">
   <link href="https://signiflyproject-6577.restdb.io/assets/css/jquery.datetimepicker.min.css" rel="stylesheet">
   
@@ -24,27 +24,29 @@
     <div class="container__child signup__thumbnail">
 
     <div class="thumbnail__content text-center">
-      <div id="headline">
-        <h1>NEWSLETTER</h1>
-      </div>
-      <h2 class="heading--primary">Welcome to E-Zone.</h2>
-      <h2 class="heading--secondary">Are you ready to join the elite?</h2>
+      <h2 class="heading--primary">Welcome to EZONE</h2>
+      <h3 class="heading--secondary">Are you ready to join the ZONE?<br> <br>By joining our newsletter you'll get customized tips and exiting news - personally for you!<br> 
+        <br>We'll help you by pushing your boundaries and challenging your limits!<br> <br>Just fill out the form, and remember to scroll down and push the submit button<br> <br>Then you're in the ZONE!</h3>
     </div>
     
+    <div class="signup__background"></div>
     <div class="signup__overlay"></div>
+    
   
 
       <div class="thumbnail__links">
-        <ul class="list-inline m-b-0 text-center">
-          <li><a href="https://www.instagram.com/ezoneesports/" target="_blank"><i class="fa fa-instagram"></i></a></li>
-          <li><a href="https://www.tiktok.com/@ezoneesports?lang=en" target="_blank"><img src="tiktok.png"></a></li>
-          <li><a href="https://www.youtube.com/channel/UCCpcxW7AwgJoP_ZpXjAzb1Q" target="_blank"><i class="fa fa-youtube-play"></i></a></li>
-          <li><a href="https://twitter.com/EzoneEsports" target="_blank"><i class="fa fa-twitter"></i></a></li>
-        </ul>
+        <a href="https://www.instagram.com/ezoneesports/" target="_blank"><i class="fa fa-instagram"></i></a>
+        <a href="https://www.tiktok.com/@ezoneesports?lang=en" target="_blank"><img src="tiktok.png"></a>
+        <a href="https://www.youtube.com/channel/UCCpcxW7AwgJoP_ZpXjAzb1Q" target="_blank"><i class="fa fa-youtube-play"></i></a>
+        <a href="https://twitter.com/EzoneEsports" target="_blank"><i class="fa fa-twitter"></i></a>
       </div>
     </div>
 
     <div class="container__child signup__form">
+
+      <div id="headline">
+        <h1>NEWSLETTER</h1>
+      </div>
     
      
         <form role="form" id="signiflyform-form">
@@ -61,31 +63,35 @@
             <label>Birthday: </label><input class="form-control top" placeholder="Your birthday" name="birthday" data-type="date" type="date">
           </div>
 
-          <br>
           <h5>PLATFORMS</h5>
-          <br>
+          
           <div class="form-group bottom">
             <label>Computer: </label><input class="form-control" name="computer" data-type="bool" type="checkbox">
             <label>Playstation: </label><input class="form-control" name="playstation" data-type="bool" type="checkbox">
           </div>
          
+          <br>
+
           <div class="form-group bottom">
             <label>Xbox: </label><input class="form-control" name="xbox" data-type="bool" type="checkbox">
             <label>Other: </label><input class="form-control" name="other" data-type="bool" type="checkbox">
           </div>
           
-          <br>
           <h5>GENRE</h5>
-          <br>
+        
           <div class="form-group bottom">
             <label>Fps: </label><input class="form-control" name="fps" data-type="bool" type="checkbox">
             <label>Simulation: </label><input class="form-control" name="simulation" data-type="bool" type="checkbox">
           </div>
+                   
+          <br>
           
           <div class="form-group bottom">
             <label>Sport: </label><input class="form-control" name="sport" data-type="bool" type="checkbox">
             <label>Survival: </label><input class="form-control" name="survival" data-type="bool" type="checkbox">
           </div>
+                   
+          <br>
           
           <div class="form-group bottom">
             <label>Strategy: </label><input class="form-control" name="strategy" data-type="bool" type="checkbox">
@@ -96,7 +102,7 @@
 
           <div id="fg-errors" class="form-group"></div>
           <div id="btn">
-            <button class="btn btn-primary btn-lg" id="btn-submit" type="submit" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Submitting...">SIGN UP</button>
+            <button class="btn btn-primary btn-lg" id="btn-submit" type="submit" data-loading-text="Submitting...">SIGN UP</button>
         </div>
         </form>
           <div class="m-t-lg">

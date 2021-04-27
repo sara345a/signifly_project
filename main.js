@@ -21,7 +21,7 @@ $(function () {
       "GENERIC_ERROR": "A server error occured, please reload page"
     }
   
-    var successMessage = "Thank you!";
+    var successMessage = "Thank you for submitting to our newsletter<br><br>We'll get in touch soon<br><br>Welcome to the ZONE!";
   
     // enable javascript datetimepicker unless supported
     // Docs and settings: http://xdsoft.net/jqplugins/datetimepicker/
