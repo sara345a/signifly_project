@@ -78,7 +78,6 @@ a,
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
@@ -161,38 +160,9 @@ label {
   }
 }
 [type="text"] {
-  // color: rgb(206, 121, 121);
   background-color: white;
   width: 400px;
 }
-
-/* [type="password"] {
-  color: #111;
-}
-.btn--form {
-  padding: 0.5rem 2.5rem;
-  font-size: 0.95rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  color: #fff;
-  background: #111;
-  border-radius: remy(35px);
-  &:focus,
-  &:hover {
-    background: lighten(#111, 13%);
-    width: 20px;
-  }
-}
-.signup__link {
-  font-size: 0.8rem;
-  font-weight: 600;
-  text-decoration: underline;
-  color: #999;
-  &:focus,
-  &:hover {
-    color: darken(#999, 13%);
-  }
-} */
 
 .signup__form {
   overflow: scroll;
@@ -202,7 +172,6 @@ label {
 #signiflyform-form input,
 #signiflyform-form select {
   background-color: white;
-  // width: unset;
   cursor: pointer;
   padding: 1.5%;
   box-shadow: 3px 3px 3px black;
@@ -246,6 +215,7 @@ input.form-control.top {
   border-color: #ffb591;
   font-family: "uniform-medium", sans-serif;
   margin-top: 5vh;
+  cursor: pointer;
 }
 
 .btn-group-lg > .btn,
@@ -288,16 +258,9 @@ img {
   z-index: +1;
   color: white;
   font-family: "shapiro-bold";
-  padding-top: 10vh;
+  padding-top: 7vh;
   font-size: 0.9em;
 }
-
-/*#headline {
-  position: absolute;
-  top: -100%;
-  left: 46%; 
-  background-color: #dffcdf;
-}*/
 
 #btn {
   padding-bottom: 50px;
@@ -316,4 +279,157 @@ img {
   letter-spacing: 0.3vh;
   font-family: "shapiro-bold";
   text-shadow: 2px 2px 8px black;
+}
+
+body {
+  background-image: url("/background.png");
+  overflow: hidden;
+}
+
+.png {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+//Animation//
+
+.close {
+  position: absolute;
+  right: 32px;
+  top: 32px;
+  width: 32px;
+  height: 32px;
+  opacity: 0.3;
+}
+.close:hover {
+  opacity: 1;
+  color: #ffb591;
+  cursor: pointer;
+}
+.close:before,
+.close:after {
+  position: absolute;
+  left: 15px;
+  content: " ";
+  height: 33px;
+  width: 2px;
+  background-color: white;
+}
+.close:before {
+  transform: rotate(45deg);
+}
+.close:after {
+  transform: rotate(-45deg);
+}
+
+.hide {
+  display: none;
+}
+
+:root {
+  --heading-color: 20 100% 82%;
+}
+
+h2 {
+  font-size: 2rem;
+  line-height: 1.125;
+  text-transform: uppercase;
+}
+
+h2 > span {
+  display: inline-block;
+  white-space: break-spaces;
+  -webkit-text-stroke: 1px hsl(var(--heading-color));
+  color: hsl(var(--heading-color));
+  animation: fill 0.5s calc(var(--index) * 0.02s + 1s) cubic-bezier(0.645, 0.045, 0.355, 1) both;
+  will-change: transform, color;
+  transform-origin: 0 0;
+}
+
+@keyframes fill {
+  from {
+    opacity: 0;
+    transform: translateX(2rem) scale(1.2);
+    transform: translateX(min(var(--index) * 1rem, 4rem)) scale(1.2);
+    color: hsl(var(--heading-color) / 0);
+  }
+  35% {
+    opacity: 1;
+  }
+  50% {
+    color: hsl(var(--heading-color) / 0);
+  }
+}
+
+html {
+  height: 100%;
+}
+
+@media (hover: hover) {
+  button:hover {
+    --bg: var(--primary-color);
+    --hover-text: #16152b;
+  }
+}
+
+//Submit button vibrates//
+
+.vibrate-1 {
+  -webkit-animation: vibrate-1 0.3s linear infinite both;
+  animation: vibrate-1 0.3s linear infinite both;
+}
+
+@-webkit-keyframes vibrate-1 {
+  0% {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+  20% {
+    -webkit-transform: translate(-2px, 2px);
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    -webkit-transform: translate(-2px, -2px);
+    transform: translate(-2px, -2px);
+  }
+  60% {
+    -webkit-transform: translate(2px, 2px);
+    transform: translate(2px, 2px);
+  }
+  80% {
+    -webkit-transform: translate(2px, -2px);
+    transform: translate(2px, -2px);
+  }
+  100% {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+}
+@keyframes vibrate-1 {
+  0% {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+  20% {
+    -webkit-transform: translate(-2px, 2px);
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    -webkit-transform: translate(-2px, -2px);
+    transform: translate(-2px, -2px);
+  }
+  60% {
+    -webkit-transform: translate(2px, 2px);
+    transform: translate(2px, 2px);
+  }
+  80% {
+    -webkit-transform: translate(2px, -2px);
+    transform: translate(2px, -2px);
+  }
+  100% {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
 }

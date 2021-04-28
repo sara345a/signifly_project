@@ -4,7 +4,7 @@ import './style.scss'
 
 $(function () {
 
-    // put your own error messages and/or message translation logic here
+    
   
     var errorMessages = {
       "REQUIRED": "This field is required",
@@ -13,22 +13,19 @@ $(function () {
       "REGEX":"Invalid data format",
       "number": "Must be an integer number",
       "money": "Must be a number with max two decimals",
-      "JSON":"Not a valid JSON",
       "float_number":"Must be a decimal number",
       "email": "Must be a valid email",
-      "FILESIZE": "Upload exceeds file size limit per field (max 1 MB)",
-      "UPLOADERROR": "Unable to upload file, please try again",
+      
       "GENERIC_ERROR": "A server error occured, please reload page"
     }
   
     var successMessage = "Thank you for submitting to our newsletter<br><br>We'll get in touch soon<br><br>Welcome to the ZONE!";
   
-    // enable javascript datetimepicker unless supported
-    // Docs and settings: http://xdsoft.net/jqplugins/datetimepicker/
+   
   
     $.datetimepicker.setLocale('en');
   
-    // if missing support for datetime, then use jquery.datetimepicker
+   
   
     if (!Modernizr.inputtypes.datetime){
         $("input[data-type=date]").datetimepicker({timepicker:false,format:"Y/m/d"}).attr("type","text");
@@ -39,7 +36,7 @@ $(function () {
     $("#signiflyform-form input[data-type=file], #signiflyform-form input[data-type=image]").on("change",function(){
       $(this).data("uploadedfiles",[]);    
     });
-    var apikey = "6082caed28bf9b609975a5d5"; // TODO: INSERT YOUR CORS API KEY HERE OR add formapikey to settings
+    var apikey = "6082caed28bf9b609975a5d5";
     
     if (!apikey) alert("Please insert a CORS API key");
   
